@@ -15,14 +15,18 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">Dwight Careers</h1>
+    <h1 class="text-center mt-2 mb-4">{{Company}} Careers</h1>
     <img  class = "img-fluid" id="banner" src="static/career.jpg.jpg">
     <h2 class="text-center">About Dwight Careers</h2>
     <p class='lead'> 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nam aliquam sem et tortor consequat id.
     </p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-    <p>TODO - Show the Jobs here </p>
+    <div>
+      {% for job in jobs%}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
       <div class='text-center'>
     <button class="btn btn-primary btn-lg">Contact</button>
         <p clas='mt-4'>Copyright 2024, Dwight</p>
